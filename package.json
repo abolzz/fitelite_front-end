@@ -1,7 +1,7 @@
 {
-  "name": "sem-lv-boilerplate_front-end",
+  "name": "fitelite-demo_front-end",
   "version": "1.0.0",
-  "description": "Boilerplate specially developed for company SEM.lv . Front-end web development boilerplate including webpack configuration",
+  "description": "Front end development internship demo project for SEM.LV",
   "main": "webpack.config.js",
   "scripts": {
     "test": "npm run dev",
@@ -23,21 +23,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/Upmacis_Andrejs/sem-lv-boilerplate_front-end.git"
+    "url": "https://github.com/abolzz/fitelite_front-end"
   },
   "keywords": [
     "front-end",
     "webpack",
-    "boilerplate"
+    "bdemo project"
   ],
-  "author": "Andrejs Upmacis",
+  "author": "Davis Abols",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/Upmacis_Andrejs/sem-lv-boilerplate_front-end/issues"
+    "url": "https://github.com/abolzz/fitelite_front-end/issues"
   },
-  "homepage": "https://gitlab.com/Upmacis_Andrejs/sem-lv-boilerplate_front-end#README",
   "devDependencies": {
-    "autoprefixer": "^8.6.4",
+    "autoprefixer": "^8.6.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
@@ -53,13 +52,13 @@
     "node-sass": "^4.9.2",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
     "postcss-easing-gradients": "^3.0.0",
-    "postcss-loader": "^2.1.5",
-    "sass-loader": "^7.0.3",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^7.1.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.14.0",
+    "webpack": "^4.16.5",
     "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4",
-    "webpack-merge": "^4.1.3"
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.4"
   }
 }
