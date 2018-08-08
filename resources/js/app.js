@@ -234,4 +234,13 @@ $(document).ready(function() {
   // Animations
   AOS.init();
 
+
+    // Mobile menu
+  $('.mobile-menu-icon').unbind("click").click(function() {
+    $(".mobile-menu-icon").toggleClass("open");
+    $(".header-menu").toggleClass("flex-c-column-max-md");
+  });
+
+  $(".site-header").css({'height': "75px" + $('.header-menu').height()});
+
 });
