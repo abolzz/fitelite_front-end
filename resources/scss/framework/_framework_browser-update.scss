@@ -1,0 +1,122 @@
+/* Deprecated browser notification style */
+
+.update_browser_fake_body {
+    position: relative;
+    display: table;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 9999999;
+}
+.update_browser_container {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #A9A9A9;
+    color: #808080;
+    font-size: 16px;
+}
+.update_browser {
+    width: 90%;
+    max-width: 1063px;
+    padding: 38px 30px 47px 30px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+}
+.update_browser_inner {
+    max-width: 855px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.update_browser_inner h1 {
+    font-size: 31px;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+}
+.update_browser_inner p {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 28px;
+    margin-bottom: 8px;
+}            
+.browser_icon_wrap {
+    margin-right: -30px;
+    margin-left: -30px;
+    margin-top: 35px;
+    font-size: 0;
+}
+.browser_link {
+    display: inline-block;
+    /* width: calc(100% / 5); */
+    width: 183px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 42px;
+}
+.browser_icon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.browser_name {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #808080;
+}
+.firefox .browser_icon { background-image: url('../img/firefox.png'); }
+.chrome .browser_icon {
+    background-image: url('../img/chrome.png');
+    background-size: 110px 110px;
+}
+.opera .browser_icon { background-image: url('../img/opera.png'); }
+.safari .browser_icon { background-image: url('../img/safari.png'); }
+.edge .browser_icon {
+    background-image: url('../img/edge.png');
+    background-size: 85px 85px;
+    left: -8px;
+    bottom: -4px;
+}
+.close_announcement {
+    display: inline-block;
+    min-width: 180px;
+    height: 43px;
+    font-size: 15px;
+    line-height: 43px;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #333;
+}
+.close_announcement,
+.close_announcement:hover,
+.close_announcement:active,
+.close_announcement:focus {
+  text-decoration: none;
+  color: #fff!important;
+}
+@media (max-width: 767px) {
+    .browser-icon-wrap {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .browser_link {
+        width: 153px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }                
+}
+@media (max-width: 480px) {
+    .update_browser {
+        width: 100%;
+        max-width: 100%;
+    }                
+}

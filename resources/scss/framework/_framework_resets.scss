@@ -1,0 +1,112 @@
+// Resets
+* {
+  box-sizing: border-box;
+  // position: relative; // uncomment this if you think all elements should have relative position
+}
+p,
+h6,
+h5,
+h4,
+h3,
+h2,
+h1,
+ul,
+ol,
+li,
+a,
+figure,
+input,
+label,
+fieldset,
+button,
+table,
+section,
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+button,
+input {
+  border: none;
+}
+button { border-radius: 0; }
+button { background: none; }  
+button:hover,
+button:active,
+button:focus,
+button:visited {
+  outline: none!important;
+}
+a,
+span {
+  display: inline-block;
+}
+a,
+a *,
+button,
+button * {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
+  transition-delay: 0s!important;
+  text-decoration-skip: none!important;
+  text-decoration-skip-ink: none!important;
+}
+a:hover,
+a:active,
+a:focus,
+a:visited,
+a *:hover,
+a *:active,
+a *:focus,
+a *:visited {
+  cursor: pointer!important;
+  text-decoration-skip: none!important;
+  text-decoration-skip-ink: none!important;
+}
+a:focus,
+a:visited {
+  outline: none;
+}
+textarea { resize: none; }
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  outline: none;
+}
+input[type="checkbox"] { display: none; }
+sup { font-size: 65%; }
+body {
+  b,
+  strong {
+    font-weight: 700;
+  }
+}
+section {
+  width: 100%;
+  max-width: 100%;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+// A better looking default horizontal rule
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+// Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers: https://github.com/h5bp/html5-boilerplate/issues/440
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}

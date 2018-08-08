@@ -1,0 +1,21 @@
+/* Site header and footer */
+
+// Site Header
+.site-header {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+  transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  z-index: 99;
+}
+.not--top .site-header {
+	height: 80px;
+	background-color: $c_accent;
+	box-shadow: $box_shadow;
+}
+
+// Site Footer
+.site-footer {
+	min-height: 100px;
+	background: linear-gradient(to top, $c_accent, ease-in-out, $c_additional);
+}

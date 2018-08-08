@@ -1,0 +1,93 @@
+/*! custom theme styles
+*   style.scss v1.0.0  */
+
+// Infopage
+
+	// Variables
+		// Grid
+			// Site width ( max width of site content )
+			$site_width: 1300px;
+
+			// Breakpoints ( viewport widths that serve as breakpoints for style and layout changes )
+$breakpoints: (
+	xl: 1360px,
+	lg: 1200px,
+	md: 768px,
+	sm: 480px,
+	xs: 0
+);
+
+			// Breakpoints turned to variables for more simple use in your custom media queries
+			// Pay attention that breakpoints have 1px subtracted from them to fit the use of desktop first applications
+$breakpoint_xl: map-get($breakpoints, xl) - 1;
+$breakpoint_lg: map-get($breakpoints, lg) - 1;
+$breakpoint_md: map-get($breakpoints, md) - 1;
+$breakpoint_sm: map-get($breakpoints, sm) - 1;
+
+			// Gutters ( site paddins (left and right) ) that can be changed according to breakpoints
+$gutters: (
+	xl: 30px,
+	lg: 30px,
+	md: 30px,
+	sm: 30px,
+	xs: 30px
+);
+
+			// Column paddings ( left and right ) that can be changed according to breakpoints
+$col_paddings: (
+	xl: 15px,
+	lg: 15px,
+	md: 15px,
+	sm: 15px,
+	xs: 15px
+);
+
+	// Colors
+$c_accent: #ED1844;
+$c_default: #1A1C20;
+$c_additional: #333740;
+$c_additional_2: #787C82;
+$c_overlay: #191C1F;
+$c_black: #000;
+$c_white: #fff;
+$c_transparent: transparent;
+
+		// Color an background-color classes for custom use
+.c-accent { color: $c_accent; }
+.c-default { color: $c_default; }
+.c-additional { color: $c_additional; }
+.c-additional-2 { color: $c_additional_2 }
+.c-overlay { color: $c_overlay; }
+.c-black { color: $c_black; }
+.c-white { color: $c_white; }
+.c-transparent { color: $c_transparent; }
+.c-on-dark { color: $c_white!important; }
+
+.bg-accent { background-color: $c_accent; }
+.bg-default { background-color: $c_default; }
+.bg-additional { background-color: $c_additional; }
+.bg-additional-2 { background-color: $c_additional_2 }
+.bg-overlay { background-color: $c_overlay; }
+.bg-black { background-color: $c_black; }
+.bg-white { background-color: $c_white; }
+.bg-transparent { background-color: $c_transparent; }
+
+	// Others ( add all values that you think should be variables )
+$box_shadow: 0px 2px 6px 0px rgba(0,0,0,.6);
+
+// Import Styles ( comment out any partial of framework that does not fit your needs )
+	// Framework
+@import 'framework/framework_resets';
+@import 'framework/framework_grid';
+@import 'framework/framework_layout';
+@import 'framework/framework_page';
+@import 'framework/framework_visual';
+@import 'framework/framework_print';
+@import 'framework/framework_cookies';
+@import 'framework/framework_browser-update';
+@import 'framework/framework_404';
+
+	// Theme
+@import 'typography';
+@import 'site-content';
+@import 'header-footer';

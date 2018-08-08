@@ -1,0 +1,43 @@
+/* Page */
+
+// Always position footer at the bottom of page
+/* In order for this to work, DOM should be as follows:
+  <html>
+  	<head></head>
+    <body>
+      <div class="site-wrap">
+        <header class="site-header"></header>
+        <main class="site-content"></main>
+        <footer class="site-footer"></footer>
+      </div>
+    </body>
+  </html>
+*/
+
+html,
+body {
+  font-kerning: auto;
+  overflow-x: hidden;
+}
+body {
+  display: flex;
+  width: 100%;
+}
+.site-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+.site-content {
+  flex: 1 1 auto!important;
+}
+
+// Disable page scrolling, but keep the scrollbar
+.no-scroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%
+}

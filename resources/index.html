@@ -1,0 +1,49 @@
+${require('./header.html')}
+			
+            <!-- site content -->
+			<main class="site-content">
+				<section class="file-section">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12">
+								<h1 class="h1">This is index.html</h1>
+								<select class="js-select">
+									<option selected>viens</option>
+									<option>divi</option>
+									<option>trīs</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="test-section" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+					<div class="container">
+						<div class="row">
+							<div class="col col-12">
+								<h1 class="h1">Checking different images</h1>
+								<img src="${require('./img/test-image.png')}">
+								<img src="${require('./img/test-image.jpg')}">
+								<img src="${require('./img/test-image.svg')}">
+							</div>
+						</div>
+						<div class="row flex-x-c">
+							<div class="col col-6 col-sm-12 col-xs-12">
+								<div class="slider-wrapper">
+								   <ul class="lightslider cS-hidden" id="lightslider-1">
+							            <li class="lightslider-item section-bg" style=""></li>
+							            <li class="custom-item section-bg" style="background-image: url(${require('./img/test-image.jpg')});"></li>
+							            <li class="custom-item section-bg" style="background-image: url(${require('./img/test-image.png')});"></li>
+							            <li class="custom-item section-bg" style="background-image: url(${require('./img/test-image.svg')});"></li>
+								  	</ul>
+								</div>
+							</div>
+						</div>
+						<div class="row js-row-full-w bg-accent">
+							<h1 class="h1 c-on-dark">This is full width row</h1>
+						</div>
+					</div>
+				</section>
+			</main>
+            <!-- /site content -->
+
+${require('./footer.html')}

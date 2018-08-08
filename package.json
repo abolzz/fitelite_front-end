@@ -1,0 +1,65 @@
+{
+  "name": "sem-lv-boilerplate_front-end",
+  "version": "1.0.0",
+  "description": "Boilerplate specially developed for company SEM.lv . Front-end web development boilerplate including webpack configuration",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "npm run dev",
+    "server": "npm run server:default -- --env.env=dev",
+    "server:prod": "npm run server:default -- --env.env=prod",
+    "server:default": "webpack-dev-server",
+    "watch": "npm run watch:default -- --env.env=dev",
+    "watch:prod": "npm run watch:default -- --env.env=prod",
+    "watch:default": "npm run build -- --watch",
+    "dev:bundleanalyze": "npm run dev -- --env.addons=bundleanalyze",
+    "dev": "npm run build -- --env.env=dev",
+    "prod:bundleanalyze": "npm run prod -- --env.addons=bundleanalyze",
+    "prod": "npm run build -- --env.env=prod",
+    "build": "webpack",
+    "webpack-defaults": "webpack-defaults",
+    "debug": "node --inspect --debug-brk ./node_modules/webpack/bin/webpack.js",
+    "debug:prod": "npm run debug -- --env.env=prod",
+    "debug:dev": "npm run debug -- --env.env=dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Upmacis_Andrejs/sem-lv-boilerplate_front-end.git"
+  },
+  "keywords": [
+    "front-end",
+    "webpack",
+    "boilerplate"
+  ],
+  "author": "Andrejs Upmacis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/Upmacis_Andrejs/sem-lv-boilerplate_front-end/issues"
+  },
+  "homepage": "https://gitlab.com/Upmacis_Andrejs/sem-lv-boilerplate_front-end#README",
+  "devDependencies": {
+    "autoprefixer": "^8.6.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^0.28.11",
+    "favicons-webpack-plugin": "0.0.9",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "imagemin-webpack-plugin": "^2.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "optimize-css-assets-webpack-plugin": "^4.0.3",
+    "postcss-easing-gradients": "^3.0.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.14.0",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3"
+  }
+}

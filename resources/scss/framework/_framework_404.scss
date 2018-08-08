@@ -1,0 +1,47 @@
+/* 404 Page style */
+
+.error404 .site-content {
+  @extend .flex-y-c;
+  flex-grow: 1;
+}
+.post_404 {
+  max-width: 570px;
+  text-align: center;
+  @extend .margin-auto;
+  .number-title {
+    margin-bottom: -20px;
+    font-size: 286px;
+    line-height: 1;
+  }
+  .page-not-found-title { margin-bottom: 12px; }
+  .btn { margin-top: 43px; }
+}
+
+@media (max-width: $breakpoint_lg) {
+  .post_404 {
+    .number-title {
+      font-size: calc(286px * 0.8);
+      margin-bottom: calc(-20px * 0.8);      
+    }
+    .btn { margin-top: 30px; }
+  }
+}
+
+@media (max-width: $breakpoint_md) {
+  .post_404 {
+    .number-title {
+      font-size: calc(286px * 0.6);
+      margin-bottom: calc(-20px * 0.6);      
+    }
+    .btn { margin-top: 25px; }
+  }
+}
+
+@media (max-width: $breakpoint_sm) {
+  .post_404 {
+    .number-title {
+      font-size: calc(286px * 0.4);
+      margin-bottom: calc(-20px * 0.4);      
+    }
+  }
+}

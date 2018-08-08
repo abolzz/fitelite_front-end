@@ -1,0 +1,109 @@
+/* Visual */
+ 
+// Background-image styles
+.icon-bg {
+  background-repeat: no-repeat;
+  background-size: contain; 
+  background-position: center center;    
+}
+.section-bg {
+  background-repeat: no-repeat;
+  background-size: cover!important; 
+  background-position: center center;  
+}
+
+// Visibility
+.opacity-0 { opacity: 0; }
+.opacity-1 { opacity: 1; }
+
+// Images
+img,
+.img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+	// Images for google maps
+.gm-style {
+  img,
+  .img {
+    max-width: none;
+    max-height: none;
+  }
+}
+
+// Text
+  // General
+.all-caps { text-transform: uppercase; }
+.text-decor-none { text-decoration: none!important; }
+.list-style-none { list-style-type: none; }
+.line-1 { line-height: 1; }
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}
+.nowrap { white-space: nowrap; }
+.wrap { white-space: initial!important; }
+.overflow-hidden { overflow: hidden; }
+.nbsp-after:after { content: "\00a0"; }
+body .bold { font-weight: 700; }
+
+  // Inline positioning
+.inline-y-c { vertical-align: middle; }
+.inline-y-b { vertical-align: bottom; }
+.inline-y-t { vertical-align: top; }
+.inline-x-c { text-align: center; }
+.inline-x-r { text-align: right; }
+
+  // Cursor
+.select:hover,
+.select *:hover,
+select:hover,
+select *:hover,
+.arrow:hover,
+.arrow *:hover,
+.btn,
+input[type="submit"]:hover {
+  cursor: pointer!important;
+}
+
+  // Buttons
+.btn {
+  display: inline-block;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.a,
+.a *,
+.btn,
+.btn * {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
+}
+.btn:focus,
+.btn:hover {
+  text-decoration: none;
+}
+.btn:focus,
+.btn.focus {
+  outline: 0;
+}
+.btn.disabled, .btn:disabled {
+  opacity: 0.65;
+}
+.btn:not([disabled]):not(.disabled):active, .btn:not([disabled]):not(.disabled).active {
+  background-image: none;
+}
+.disabled,
+[disabled] {
+  pointer-events: none;
+}
