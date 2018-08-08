@@ -88,6 +88,7 @@ input[type="submit"]:hover {
 .btn,
 .btn * {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
+  text-decoration: none;
 }
 .btn:focus,
 .btn:hover {

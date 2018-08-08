@@ -4,9 +4,12 @@
 .site-header {
 	position: fixed;
 	width: 100%;
-	height: 100px;
+	height: 75px;
   	transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
   	z-index: 99;
+  	li { padding: 0 15px; }
+  	li:first-child { padding-left: 0; }
+  	li:last-child { padding-right: 0; }
 }
 .not--top .site-header {
 	height: 80px;
@@ -15,7 +18,14 @@
 }
 
 // Site Footer
+$footer_height: 70px;
 .site-footer {
-	min-height: 100px;
-	background: linear-gradient(to top, $c_accent, ease-in-out, $c_additional);
+	height: $footer_height;
+	.inner {
+		border-top: 1px solid $c_accent;
+		height: $footer_height;
+	}
+	ul {
+		li:first-child { padding-right: 24px; }
+	}
 }

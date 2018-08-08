@@ -6,7 +6,7 @@
 	// Variables
 		// Grid
 			// Site width ( max width of site content )
-			$site_width: 1300px;
+			$site_width: 1200px;
 
 			// Breakpoints ( viewport widths that serve as breakpoints for style and layout changes )
 $breakpoints: (
@@ -43,11 +43,15 @@ $col_paddings: (
 );
 
 	// Colors
-$c_accent: #ED1844;
-$c_default: #1A1C20;
-$c_additional: #333740;
-$c_additional_2: #787C82;
-$c_overlay: #191C1F;
+$c_accent: #163970; // blue
+$c_default: #f5f5f5; // light gray for section bg
+$c_additional: #009fe3; // light blue
+$c_additional_2: #009a93; // greenish blue
+$c_additional_3: #007bc3; // body toning (in table)
+$c_additional_4: #007270; // TRX
+$c_additional_5: #005caa; // MAX
+$c_additional_6: #959595; // gray for table boundries
+$c_additional_footer: #a4a4a4; // footer gray
 $c_black: #000;
 $c_white: #fff;
 $c_transparent: transparent;
@@ -57,7 +61,7 @@ $c_transparent: transparent;
 .c-default { color: $c_default; }
 .c-additional { color: $c_additional; }
 .c-additional-2 { color: $c_additional_2 }
-.c-overlay { color: $c_overlay; }
+// .c-overlay { color: $c_overlay; }
 .c-black { color: $c_black; }
 .c-white { color: $c_white; }
 .c-transparent { color: $c_transparent; }
@@ -67,7 +71,7 @@ $c_transparent: transparent;
 .bg-default { background-color: $c_default; }
 .bg-additional { background-color: $c_additional; }
 .bg-additional-2 { background-color: $c_additional_2 }
-.bg-overlay { background-color: $c_overlay; }
+// .bg-overlay { background-color: $c_overlay; }
 .bg-black { background-color: $c_black; }
 .bg-white { background-color: $c_white; }
 .bg-transparent { background-color: $c_transparent; }
