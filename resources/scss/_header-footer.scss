@@ -20,12 +20,33 @@
 // Site Footer
 $footer_height: 70px;
 .site-footer {
-	height: $footer_height;
+	min-height: $footer_height;
 	.inner {
 		border-top: 1px solid $c_accent;
-		height: $footer_height;
+		min-height: $footer_height;
+		padding: 5px 0;
 	}
-	ul {
-		li:first-child { padding-right: 24px; }
+}
+@media(min-width: $breakpoint_sm){
+	.flex-min-sm {
+		display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
 	}
+	.site-footer {
+		ul {
+			li:first-child { padding-right: 24px; }
+		}
+	}
+}
+@media(min-width: $breakpoint_md) and (max-width: $breakpoint_lg) {
+	.inline-x-c-md { text-align: center; }
+	.inline-x-r-md { text-align: right; }
+}
+@media(min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+	.inline-x-c-sm { text-align: center; }
+	.inline-x-r-sm { text-align: right; }
+}
+@media(max-width: $breakpoint_sm) {
+	.inline-x-c-xs { text-align: center; }
 }
