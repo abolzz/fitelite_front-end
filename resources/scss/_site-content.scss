@@ -94,14 +94,16 @@
 }
 @media(max-width: $breakpoint_lg) {
   .slider { height: calc(80vh - 75px); }
-  .slider-text-wrap { width: 85%; }
+  .slider-text-wrap { width: 80%; }
 }
-@media(min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
-  .slider-text-wrap { width: 90%; }
+@media(min-width: $breakpoint_sm + 1) and (max-width: $breakpoint_lg) {
   .dot {
     width: 15px;
     height: 15px;
   }
+}
+@media(max-width: $breakpoint_md) {
+  .slider-text-wrap { width: 90%; }
 }
 @media(max-width: $breakpoint_sm) {
   .dot {

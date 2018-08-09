@@ -4,25 +4,23 @@
 .site-header {
 	position: fixed;
 	width: 100%;
+	min-height: 75px;
   transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
   z-index: 99;
   li {
-  	height: 75px; //
   	position: relative;
   	cursor: pointer;
   	span {
   		height: 4px;
   		width: 100%;
-  		 // top: $header_height; //
   		position: absolute;
   		background-color: transparent;
   	}
   	&.active span { background-color: $c_additional_2; }
-  a {
-  	margin: 0 15px;
-	  &:first-child { padding-left: 0; }
-	  &:last-child { padding-right: 0; }
 	}
+	a {
+  	margin: 0 15px;
+  	height: 100%;
 	}
 	li:hover span { background-color: $c_additional_2; }
 }
@@ -31,7 +29,7 @@
 }
 .mobile-menu-icon {
 	.inner {
-		width: 50px;
+		width: 48px;
 		height: 24px;
 		position: relative;
 	}
@@ -74,7 +72,12 @@ $footer_height: 70px;
 		padding-bottom: 10px;
 	}
 }
-@media(min-width: $breakpoint_md) and (max-width: $breakpoint_lg) {
+@media(min-width: $breakpoint_lg + 1) {
+	.site-header {
+		span { top: 75px; }
+	}
+}
+@media(min-width: $breakpoint_md + 1) and (max-width: $breakpoint_lg) {
 	.inline-x-c-md { text-align: center; }
 	.inline-x-r-md { text-align: right; }
 	.hide-md { display: none; }
@@ -82,20 +85,21 @@ $footer_height: 70px;
 		a { margin: 0 7px; }
 	}
 }
-@media(min-width: $breakpoint_md) {
-	.site-header { height: 75px; } //
-}
-@media(max-width: $breakpoint_md) {
+@media(max-width: $breakpoint_lg) {
 	.header-menu {
 		display: none;
 		padding: 10px 0;
-		a { margin: 5px 0; }
+		a { margin: 15px 0; }
 	} 
-	.flex-c-column-max-md {
+	.flex-c-column-max-lg {
 		display: flex;
   	justify-content: center;
   	align-items: center;
   	flex-direction: column;
+	}
+	.site-footer,
+	.site-header {
+		.inner { padding: 10px 0; }
 	}
 }
 @media(min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
@@ -116,8 +120,4 @@ $footer_height: 70px;
 }
 @media(max-width: $breakpoint_md) {
 	.inline-x-c-xs { text-align: center; }
-	.site-footer,
-	.site-header {
-		.inner { padding: 10px 0; }
-	}
 }
