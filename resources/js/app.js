@@ -241,7 +241,20 @@ $(document).ready(function() {
     $(".header-menu").toggleClass("flex-c-column-max-md");
   });
 
+  // Header height
   $(".site-header").css({'height': "75px" + $('.header-menu').height()});
+
+  if ($(window).width() > 767) {
+    $(".header-menu").css({'height': $('.site-header').height()});
+  }
+
+  // Navigation
+  $(".indicator").css({'top': $('.site-header').height()});
+
+  $('.menu-item').unbind("click").click(function() {
+    $('.menu-item').removeClass("active");
+    $(this).addClass("active");
+  });
 
   // Slider
   var slideIndex = 0;

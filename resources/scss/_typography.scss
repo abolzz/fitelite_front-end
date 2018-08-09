@@ -13,16 +13,20 @@
   font-size: 40px;
   line-height: 1.1;
   letter-spacing: .2em;
+  color: $c_accent;
 }
 .h2, .h5 {
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
   line-height: 1.2;
+  color: $c_accent;
+  font-weight: 300;
 }
 
 // Header anchors
 .site-header {
   a { color: $c_black; }
+  li:hover {  }
 }
 
 // Slider section
@@ -30,11 +34,44 @@
   font-weight: 600;
   q {
     font-size: 60px;
-    line-height: 1.2;
+    line-height: 1.1;
   }
   p {
     margin-top: 40px;
     font-size: 30px;
+  }
+}
+@media(min-width: $breakpoint_md) and (max-width: $breakpoint_lg) {
+  .slider {
+    q {
+      font-size: 40px;
+    }
+    p {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+  }
+}
+@media(min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+  .slider {
+    q {
+      font-size: 35px;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+  }
+}
+@media(max-width: $breakpoint_sm) {
+  .slider {
+    q {
+      font-size: 28px;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
   }
 }
 
