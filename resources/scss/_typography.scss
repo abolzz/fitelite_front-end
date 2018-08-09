@@ -25,6 +25,19 @@
   a { color: $c_black; }
 }
 
+// Slider section
+.slider {
+  font-weight: 600;
+  q {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  p {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+}
+
 // Footer
 .site-footer {
   color: $c_additional_footer;

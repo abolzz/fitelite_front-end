@@ -1,6 +1,8 @@
 /* Site header and footer */
 
 // Site Header
+$header_height: 75px;
+
 .site-header {
 	position: fixed;
 	width: 100%;
@@ -11,7 +13,7 @@
   li:last-child { padding-right: 0; }
 }
 .not--top .site-header {
-	height: 60px;
+	height: $header_height - 15px;
 	opacity: .8;
 }
 .mobile-menu-icon {
@@ -49,6 +51,7 @@
 
 // Site Footer
 $footer_height: 70px;
+
 .site-footer {
 	min-height: $footer_height;
 	.inner {
@@ -57,14 +60,6 @@ $footer_height: 70px;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-}
-@media(min-width: $breakpoint_xl) {
-	.hide-xl { display: none; }
-	.show-xl { display: block; }
-}
-@media(min-width: $breakpoint_lg) and (max-width: $breakpoint_xl) {
-	.hide-lg { display: none; }
-	.show-lg { display: block; }
 }
 @media(min-width: $breakpoint_md) and (max-width: $breakpoint_lg) {
 	.inline-x-c-md { text-align: center; }
@@ -75,7 +70,7 @@ $footer_height: 70px;
 	}
 }
 @media(min-width: $breakpoint_md) {
-	.site-header { height: 75px; }
+	.site-header { height: $header_height; }
 }
 @media(max-width: $breakpoint_md) {
 	.header-menu {
