@@ -14,6 +14,10 @@ hr {
   height: 1px;
   margin: 20px 0;
 }
+.inner-default {
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
 
 .btn-1 {
   min-width: 223px;
@@ -146,7 +150,11 @@ hr {
   .portrait-section {
     .section-img { background-position: center; }
     .article { margin-top: 30px; }
-    ul {
+  }
+}
+@media(min-width: $breakpoint_md) and (max-width: $breakpoint_lg) {
+  .portrait-section {
+    .ul {
       column-count: 2;
       column-gap: 40px;
     }
@@ -155,13 +163,12 @@ hr {
 
 // Angebot section
 .angebot-section {
-  .inner {
-    padding-top: 35px;
-    padding-bottom: 30px;
+  .row:nth-of-type(odd) {
+    .article { order: 1; }
+    .img-wrap { order: 2; }
   }
   .section-img-1 {
     background-image: url("../img/triangle-img1.png");
-    background-position: right;
     min-height: 281px;
   }
   .section-img-2 {
@@ -170,7 +177,6 @@ hr {
   }
   .section-img-3 {
     background-image: url("../img/triangle-img3.png");
-    background-position: right;
     min-height: 318px;
   }
   .section-img-4 {
@@ -179,14 +185,26 @@ hr {
   }
   .section-img-5 {
     background-image: url("../img/triangle-img5.png");
-    background-position: right;
     min-height: 315px;
   }
 }
 @media(min-width: $breakpoint_lg + 1) {
   .angebot-section {
     .article { padding: 0 30px; }
+    .section-img-1,
+    .section-img-3,
+    .section-img-5 { background-position: right; }
   }
+}
+@media(min-width: $breakpoint_md + 1) {
+  .angebot-section {
+    .section-img-1,
+    .section-img-3,
+    .section-img-5 { background-position: right; }
+  }
+}
+@media(max-width: $breakpoint_md) {
+  .section-img { background-position: center; }
 }
 
 // Vorteile section
@@ -195,9 +213,8 @@ hr {
     counter-reset: li-counter;
     margin-top: 20px;
     li {
-      width: 18%;
-      padding: 0 1%;
       justify-content: flex-start;
+      margin-bottom: 20px;
     }
     li::before {
       -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
@@ -219,6 +236,31 @@ hr {
       justify-content: center;
       text-align: center;
       margin-bottom: 16px;
+    }
+  }
+}
+
+// Trainingsplan section
+.trainingsplan-section {
+  .table {
+    .thead {
+      margin-bottom: 9px;
+      .td { border: 1px solid $c_white; }
+    }
+    .trow {
+      .td {
+        flex: 1;
+        width: 0;
+        height: 70px;
+      }
+    }
+    .tbody {
+      .td {
+        border: 1px solid $c_additional_6;
+        background-color: $c_white;
+        &:empty { background-color: transparent; }
+      }
+      .trow:nth-of-type(3n) { margin-bottom: 9px; }
     }
   }
 }
