@@ -5,7 +5,7 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.2;
   letter-spacing: -0.01em;
 }
 .h1 {
@@ -14,14 +14,19 @@
   line-height: 1.1;
   letter-spacing: .2em;
   color: $c_accent;
+  font-weight: 300;
 }
-.h2, .h5 {
+.h2,
+.h3,
+.h4,
+.h5 {
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
   line-height: 1.2;
   color: $c_accent;
   font-weight: 300;
 }
+.f-20 { font-size: 20px; }
 
 // Header anchors
 .site-header {
