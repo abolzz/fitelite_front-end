@@ -317,7 +317,7 @@ $(document).ready(function() {
      } 
   }
 
-  // Leave the background color of table data transparent if it is empty
+  // The content of empty data in the price table 
   let priceTableData = $('.tbody > .trow > .td > span');
 
   for (var i = 0; i < priceTableData.length; i++) {
