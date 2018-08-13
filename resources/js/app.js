@@ -307,4 +307,24 @@ $(document).ready(function() {
       setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
 
+  // Leave the background color of table data transparent if it is empty
+  let tableData = $('.tbody > .trow > .td > span');
+
+  for (var i = 0; i < tableData.length; i++) {
+    var thisTd = tableData[i];
+     if( $(thisTd).is(':empty') ) {
+      $(thisTd).parent().css({'background-color': 'transparent'});
+     } 
+  }
+
+  // Leave the background color of table data transparent if it is empty
+  let priceTableData = $('.tbody > .trow > .td > span');
+
+  for (var i = 0; i < priceTableData.length; i++) {
+    var thisTd = priceTableData[i];
+     if( $(thisTd).is(':empty') ) {
+      $(thisTd).html("-");
+     } 
+  }
+
 });

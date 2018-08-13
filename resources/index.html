@@ -209,73 +209,384 @@ ${require('./header.html')}
 						<div class="row">
 							<div class="col col-12">
 								<h1 class="h1 h1-default all-caps inline-x-c">Trainingsplan</h1>
-								<div class="table inline-x-c">
-										<div class="thead trow flex bg-accent c-white">
-											<p class="td flex-y-c flex-x-c">Montag</p>
-											<p class="td flex-y-c flex-x-c">Dienstag</p>
-											<p class="td flex-y-c flex-x-c">Mittwoch</p>
-											<p class="td flex-y-c flex-x-c">Donnerstag</p>
-											<p class="td flex-y-c flex-x-c">Freitag</p>
-											<p class="td flex-y-c flex-x-c">Samstag</p>
-											<p class="td flex-y-c flex-x-c">Sonntag</p>
-										</div>
-									<div class="tbody">
-										<div class="trow flex">
-											<p class="td flex-y-c flex-x-c"></p>
-											<p class="td flex-y-c flex-x-c">Dienstag</p>
-											<p class="td flex-y-c flex-x-c">Mittwoch</p>
-											<p class="td flex-y-c flex-x-c">Donnerstag</p>
-											<p class="td flex-y-c flex-x-c">Freitag</p>
-											<p class="td flex-y-c flex-x-c">Samstag</p>
-											<p class="td flex-y-c flex-x-c">Sonntag</p>
-										</div>
-										<div class="trow flex">
-											<p class="td flex-y-c flex-x-c">Montag</p>
-											<p class="td flex-y-c flex-x-c">Dienstag</p>
-											<p class="td flex-y-c flex-x-c">Mittwoch</p>
-											<p class="td flex-y-c flex-x-c">Donnerstag</p>
-											<p class="td flex-y-c flex-x-c">Freitag</p>
-											<p class="td flex-y-c flex-x-c">Samstag</p>
-											<p class="td flex-y-c flex-x-c">Sonntag</p>
-										</div>
-										<div class="trow flex">
-											<p class="td flex-y-c flex-x-c">Montag</p>
-											<p class="td flex-y-c flex-x-c">Dienstag</p>
-											<p class="td flex-y-c flex-x-c">Mittwoch</p>
-											<p class="td flex-y-c flex-x-c">Donnerstag</p>
-											<p class="td flex-y-c flex-x-c">Freitag</p>
-											<p class="td flex-y-c flex-x-c">Samstag</p>
-											<p class="td flex-y-c flex-x-c">Sonntag</p>
-										</div>
-										<div class="trow flex">
-											<p class="td flex-y-c flex-x-c">Montag</p>
-											<p class="td flex-y-c flex-x-c">Dienstag</p>
-											<p class="td flex-y-c flex-x-c">Mittwoch</p>
-											<p class="td flex-y-c flex-x-c">Antara Gesunde Rücken 18:45 – 19:45</p>
-											<p class="td flex-y-c flex-x-c">Freitag</p>
-											<p class="td flex-y-c flex-x-c">Samstag</p>
-											<p class="td flex-y-c flex-x-c">Sonntag</p>
-										</div>
-										<div class="trow flex">
-											<p class="td flex-y-c flex-x-c">Montag</p>
-											<p class="td flex-y-c flex-x-c">Dienstag</p>
-											<p class="td flex-y-c flex-x-c">Mittwoch</p>
-											<p class="td flex-y-c flex-x-c">Donnerstag</p>
-											<p class="td flex-y-c flex-x-c">Freitag</p>
-											<p class="td flex-y-c flex-x-c">Samstag</p>
-											<p class="td flex-y-c flex-x-c">Sonntag</p>
-										</div>
-										<div class="trow flex">
-											<p class="td flex-y-c flex-x-c">Montag</p>
-											<p class="td flex-y-c flex-x-c">Dienstag</p>
-											<p class="td flex-y-c flex-x-c">Mittwoch</p>
-											<p class="td flex-y-c flex-x-c">Donnerstag</p>
-											<p class="td flex-y-c flex-x-c">Freitag</p>
-											<p class="td flex-y-c flex-x-c">Samstag</p>
-											<p class="td flex-y-c flex-x-c">Sonntag</p>
+								<div class="table-wrap">
+									<div class="table inline-x-c">
+											<div class="thead trow flex bg-accent c-white">
+												<div class="td flex-y-c flex-x-c">
+													<span>Montag</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span>Dienstag</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span>Mittwoch</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span>Donnerstag</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span>Freitag</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span>Samstag</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span>Sonntag</span>
+												</div>
+											</div>
+										<div class="tbody">
+											<div class="trow flex">
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name"></span>
+													<span class="trainer"></span>
+													<span class="training-time"></span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name"></span>
+													<span class="trainer"></span>
+													<span class="training-time"></span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+											</div>
+											<div class="trow flex">
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+											</div>
+											<div class="trow flex">
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name"></span>
+													<span class="trainer"></span>
+													<span class="training-time"></span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+											</div>
+											<div class="trow flex">
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name"></span>
+													<span class="trainer"></span>
+													<span class="training-time"></span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+											</div>
+											<div class="trow flex">
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+											</div>
+											<div class="trow flex">
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+												<div class="td flex-y-c flex-x-c">
+													<span class="training-name">Antara</span>
+													<span class="trainer">Gesunde Rücken</span>
+													<span class="training-time">8:15 – 9:15</span>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="preise" class="section preise-section">
+					<div class="container inner-default">
+						<div class="row">
+							<div class="col col-12">
+								<h1 class="h1 h1-default all-caps inline-x-c">Preise</h1>
+								<h2 class="h2 inline-x-c">Preisliste Gruppenfitness FitElite - Preisliste 2016</h2>
+								<div class="table-wrap">
+									<div class="table inline-x-c">
+												<div class="thead trow flex bold">
+													<div class="td flex-y-c flex-x-c">
+														<span>Abotyp</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Gültigkeit (inkl. Ferien)</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Preis ohne TRX Lektionen</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Preis Inkl. TRX Lektionen</span>
+													</div>
+												</div>
+											<div class="tbody">
+												<div class="trow flex">
+													<div class="td flex-y-c flex-x-c">
+														<span>1. Lektion</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span></span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 18.00</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 18.00</span>
+													</div>
+												</div>
+												<div class="trow flex">
+													<div class="td flex-y-c flex-x-c">
+														<span>10-er Abo.</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>3. Monate</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 170.00</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 18.00</span>
+													</div>
+												</div>
+												<div class="trow flex">
+													<div class="td flex-y-c flex-x-c">
+														<span>20-er Abo.</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>6. Monate</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 300.00</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 320.00</span>
+													</div>
+												</div>
+												<div class="trow flex">
+													<div class="td flex-y-c flex-x-c">
+														<span>50-er Abo.</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>7. Monate</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 550.00</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 600.00</span>
+													</div>
+												</div>
+												<div class="trow flex">
+													<div class="td flex-y-c flex-x-c">
+														<span>100-er Abo. </span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>13. Monate</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 900.00</span>
+													</div>
+													<div class="td flex-y-c flex-x-c">
+														<span>Fr. 1'000.00</span>
+													</div>
+												</div>
+											</div>
+								</div>
+							</div>
+							<span class="flex-x-c">***Erstes Probetraining  ist Gratis, es beinhaltet ein Vorgespräch vor dem Training und ein anschliessendes Gespräch nach dem Training</span>
+						</div>
+					</div>
+				</section>
+
+				<section id="kontakt" class="section kontakt-section bg-default">
+					<div class="container inner-default">
+						<div class="row">
+							<h1 class="h1 h1-default all-caps margin-auto">Kontakt</h1>
+						</div>
+						<div class="row">
+							<div class="col col-12 col-sm-11 col-md-8 col-lg-5 col-xl-5 margin-auto flex">
+								<div class="col col-xs-12 col-6 inline-x-c">
+									<p>Lorem ipsum dolor sit amet, consectetur</p>
+								</div>
+									<address class="col col-xs-12 col-6 inline-x-c address">
+										<ul class="list-style-none">
+											<li>Phone: <a href="tel:+41(0)796825262">+41 (0) 79 682 52 62</a></li>
+											<li>E-mail: <a href="mailto:info@fitelite.ch">info@fitelite.ch</a></li>
+										</ul>
+									</address>
+							</div>
+						</div>
+						<div class="col col-12">
+							<div id="acf-map" class="google-map">
+								<div class="marker" data-lat="56.966129" data-lng="24.141866"></div>
 							</div>
 						</div>
 					</div>

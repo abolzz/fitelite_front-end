@@ -243,24 +243,77 @@ hr {
 // Trainingsplan section
 .trainingsplan-section {
   .table {
-    .thead {
-      margin-bottom: 9px;
-      .td { border: 1px solid $c_white; }
-    }
-    .trow {
-      .td {
-        flex: 1;
-        width: 0;
-        height: 70px;
-      }
+    width: 1170px;
+    margin: 0 15px;
+    .td {
+      flex: 1;
+      width: 0;
+      height: 70px;
     }
     .tbody {
-      .td {
+      border-top: 1px solid $c_additional_6;
+      .trow {
         border: 1px solid $c_additional_6;
+        border-top: none;
+        &:nth-of-type(4) { border-top: 1px solid $c_additional_6; }
+        .td {
+          border-right: 1px solid $c_additional_6;
+          border-left: none;
+          &:last-of-type { border-right: none; }
+        }
+      }
+      .td {
         background-color: $c_white;
-        &:empty { background-color: transparent; }
+        span {
+          width: 85%;
+          margin: 0 auto;
+          &:first-of-type { margin-top: 5px; }
+          &:last-of-type { margin-bottom: 5px; }
+        }
       }
       .trow:nth-of-type(3n) { margin-bottom: 9px; }
     }
+    .thead {
+      margin-bottom: 9px;
+      .td {
+        border: 1px solid $c_white;
+        border-left: none;
+        &:first-of-type { border-left: 1px solid $c_white; }
+      }
+    }
   }
+}
+
+.table-wrap { overflow-x:auto; }
+
+// Preise section
+.preise-section {
+  .table {
+    min-width: 600px;
+    margin: 36px 0;
+    .thead { border-bottom: 2px solid $c_black; }
+    .td {
+      flex: 1;
+      width: 0;
+      height: 43px;
+    }
+  }
+}
+
+// Kontakt section
+@media(max-width: $breakpoint_sm) {
+  .kontakt-section {
+    .address { margin-top: 15px; }
+  }
+}
+@media(min-width: $breakpoint_sm + 1) and (max-width: $breakpoint_md) {
+  .google-map { zoom: .7; }
+}
+@media(max-width: $breakpoint_sm) {
+  .google-map { zoom: .5; }
+}
+.google-map {
+  margin-top: 15px;
+  height: 370px;
+  border-bottom: 1px solid $c_accent;
 }
