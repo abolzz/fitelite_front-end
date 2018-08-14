@@ -134,11 +134,11 @@ $(document).ready(function() {
 
   $(window).scroll(() => {
 
-    let $currentY = $window.scrollTop();
+    var $currentY = $window.scrollTop();
     if ( $currentY > $lastY ) {
-      let y = 'down';
+      var y = 'down';
     } else if ( $currentY < $lastY ) {
-      let y = 'up';
+      var y = 'up';
     }
     $lastY = $currentY;
     if ( $document.scrollTop() > 50 && y == 'down' ) {
@@ -318,7 +318,7 @@ $(document).ready(function() {
   }
 
   // The content of empty data in the price table 
-  let priceTableData = $('.tbody > .trow > .td > span');
+  let priceTableData = $('.price-table > .tbody > .trow > .td > span');
 
   for (var i = 0; i < priceTableData.length; i++) {
     var thisTd = priceTableData[i];
@@ -326,5 +326,34 @@ $(document).ready(function() {
       $(thisTd).html("-");
      } 
   }
+
+
+  // Updates the navigation depending on scroll position
+    $('a[href*="#"]').bind('click', function(e) {
+        e.preventDefault(); // prevent hard jump, the default behavior
+
+        var target = $(this).attr("href"); // Set the target as variable
+
+        // perform animated scrolling by getting top-position of target-element and set it as scroll target
+        $('html, body').stop().animate({
+            scrollTop: $(target).offset().top
+        }, 600, function() {
+            location.hash = target; //attach the hash (#jumptarget) to the pageurl
+        });
+
+        return false;
+    });
+
+$(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+  
+    // Assign active class to nav links while scolling
+    $('.section').each(function(i) {
+        if ($(this).position().top <= scrollDistance) {
+            $('.header-menu li.active').removeClass('active');
+            $('.header-menu a').parent().eq(i).addClass('active');
+        }
+    });
+}).scroll();
 
 });

@@ -103,7 +103,6 @@ hr {
   .slider-text-wrap { width: 970px; }
 }
 @media(max-width: $breakpoint_lg) {
-  .slider { height: calc(80vh - 75px); }
   .slider-text-wrap { width: 80%; }
 }
 @media(min-width: $breakpoint_sm + 1) and (max-width: $breakpoint_lg) {
@@ -163,10 +162,6 @@ hr {
 
 // Angebot section
 .angebot-section {
-  .row:nth-of-type(odd) {
-    .article { order: 1; }
-    .img-wrap { order: 2; }
-  }
   .section-img-1 {
     background-image: url("../img/triangle-img1.png");
     min-height: 281px;
@@ -201,7 +196,11 @@ hr {
     .section-img-1,
     .section-img-3,
     .section-img-5 { background-position: right; }
-  }
+    .row:nth-of-type(odd) {
+      .article { order: 1; }
+      .img-wrap { order: 2; }
+    }
+  }    
 }
 @media(max-width: $breakpoint_md) {
   .section-img { background-position: center; }
@@ -243,12 +242,12 @@ hr {
 // Trainingsplan section
 .trainingsplan-section {
   .table {
-    width: 1170px;
-    margin: 0 15px;
+    word-wrap: break-word;
     .td {
       flex: 1;
       width: 0;
       height: 70px;
+      span { width: 95%; }
     }
     .tbody {
       border-top: 1px solid $c_additional_6;
@@ -265,7 +264,6 @@ hr {
       .td {
         background-color: $c_white;
         span {
-          width: 85%;
           margin: 0 auto;
           &:first-of-type { margin-top: 5px; }
           &:last-of-type { margin-bottom: 5px; }
@@ -283,13 +281,52 @@ hr {
     }
   }
 }
+@media(min-width: $breakpoint_lg + 1) {
+  .table-wrap { padding: 0 15px; }
+  .trainingsplan-section {
+    .table {
+      margin: 0 15px;
+      span { width: 85%; }
+    }
+  }
+}
+@media(min-width: $breakpoint_md + 1) and (max-width: 1024px) {
+  .table-wrap { padding: 0 15px; }
+  .trainingsplan-section {
+      .table {
+        .tbody {
+        font-size: 14px;
+        .td { height: 90px; }
+        }
+      }
+  }
+}
+@media(min-width: $breakpoint_sm + 1) and (max-width: $breakpoint_md) {
+  .trainingsplan-section {
+      .table {
+        font-size: 11px;
+        .thead {
+          .td { height: 50px; }
+        }
+      }
+  }
+}
+@media(max-width: $breakpoint_sm) {
+  .trainingsplan-section {
+    .table {
+      font-size: 9px;
+      .thead {
+        .td { height: 40px; }
+      }
+    }
+  }
+}
 
 .table-wrap { overflow-x:auto; }
 
 // Preise section
 .preise-section {
   .table {
-    min-width: 600px;
     margin: 36px 0;
     .thead { border-bottom: 2px solid $c_black; }
     .td {
@@ -297,6 +334,11 @@ hr {
       width: 0;
       height: 43px;
     }
+  }
+}
+@media(max-width: $breakpoint_sm) {
+  .preise-section {
+    .table { font-size: 12px; }
   }
 }
 

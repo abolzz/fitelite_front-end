@@ -26,12 +26,16 @@
   color: $c_accent;
   font-weight: 300;
 }
+@media(max-width: $breakpoint_sm) {
+  .h1 { font-size: 26px; }
+  .h2 { font-size: 20px; }
+  .p, body { font-size: 14px; }
+}
 .f-20 { font-size: 20px; }
 
 // Header anchors
 .site-header {
   a { color: $c_black; }
-  li:hover {  }
 }
 
 // Slider section
