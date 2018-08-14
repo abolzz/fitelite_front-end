@@ -149,69 +149,6 @@ $(document).ready(function() {
 
   });
 
-  // Image slider script
-  function imageSlider() {
-    if( $('.lightslider').length > 0 ) {
-      let slider = 0;
-
-      $(".lightslider").each(function() {
-        slider += 1;
-        let $this = $(this);
-        let $this_slider = $('#lightslider-'+slider);
-
-        if ( $this.hasClass("with-pager") ) {
-          $this.lightSlider({
-            item      : 1,
-            auto      : true,
-            loop      : true,
-            pauseOnHover  : true,
-            speed: 600,
-            pause: 3000,
-            controls: false,
-            onBeforeStart: function() {
-              if ( $this_slider.find('li').length < 2 ) {
-                $this_slider.addClass('one-item');
-              }
-            },
-            onSliderLoad: function() {
-              $this_slider.removeClass('cS-hidden').addClass('initialized');
-            },
-          });
-        } else {
-          $this.lightSlider({
-            item  : 1,
-            pager : false,
-            auto      : true,
-            loop      : true,
-            pauseOnHover  : true,
-            speed: 600,
-            pause: 3000,
-            enableTouch : false,
-            enableDrag : false,
-            onBeforeStart: function() {
-              if ( $this_slider.find('li').length < 2 ) {
-                $this_slider.addClass('one-item');
-              }
-            },
-            onSliderLoad: function() {
-              $this_slider.parent().find('.lSAction > a').prepend('<div class="slider-arrow-img"></div>');
-              $this_slider.removeClass('cS-hidden').addClass('initialized');
-            },
-            onAfterSlide: function() {
-              $this_slider.find('video').each(function() {
-                $(this).get(0).pause();
-              });
-              $this_slider.find('.btn-play').removeClass('opacity-0');
-            }
-          });
-        }
-
-      });
-
-    }
-  }
-  imageSlider();
-
   // Select
   function selectPlugin() {
     if( $('.js-select').length > 0 ) {
@@ -252,7 +189,6 @@ $(document).ready(function() {
       {
         $(".mobile-menu-icon").removeClass("open");
         $(".header-menu").removeClass("flex-c-column-max-lg");
-        $(".mobile-menu-wrap").stop(true, true).slideUp();
         return false;
       }
     }
@@ -273,15 +209,14 @@ $(document).ready(function() {
   });
 
   // Scroll the page according to clicked navigation item
-  $(".header-menu a").click(function() {
+  $(".site-header a").click(function() {
     var $href = $(this).attr('href');
       $("html, body").animate({
           scrollTop: $($href).offset().top - $('.site-header').height()
       }, 400);
     $(".mobile-menu-icon").removeClass("open");
     if ($(window).width() < 1199) {
-      $(".header-menu").removeClass("flex-c-column-max-lg");
-      $(".header-menu").stop(true, true).slideUp();
+        $(".header-menu").removeClass("flex-c-column-max-lg");
     }
   });
 
@@ -327,7 +262,6 @@ $(document).ready(function() {
      } 
   }
 
-
   // Updates the navigation depending on scroll position
     $('a[href*="#"]').bind('click', function(e) {
         e.preventDefault(); // prevent hard jump, the default behavior
@@ -344,16 +278,16 @@ $(document).ready(function() {
         return false;
     });
 
-$(window).scroll(function() {
-    var scrollDistance = $(window).scrollTop();
-  
-    // Assign active class to nav links while scolling
-    $('.section').each(function(i) {
-        if ($(this).position().top <= scrollDistance) {
-            $('.header-menu li.active').removeClass('active');
-            $('.header-menu a').parent().eq(i).addClass('active');
-        }
-    });
-}).scroll();
+    $(window).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
+      
+        // Assign active class to nav links while scolling
+        $('.section').each(function(i) {
+            if ($(this).position().top <= scrollDistance) {
+                $('.header-menu li.active').removeClass('active');
+                $('.header-menu a').parent().eq(i).addClass('active');
+            }
+        });
+    }).scroll();
 
 });

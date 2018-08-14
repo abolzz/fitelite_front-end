@@ -26,6 +26,7 @@
 }
 .not--top .site-header {
 	background-color: rgba(255, 255, 255, .8);
+	min-height: 60px;
 }
 .mobile-menu-icon {
 	.inner {
@@ -75,6 +76,9 @@ $footer_height: 70px;
 @media(min-width: $breakpoint_lg + 1) {
 	.site-header {
 		span { top: 75px; }
+	}
+	.not--top .site-header {
+		span { top: 60px; }
 	}
 }
 @media(min-width: $breakpoint_md + 1) and (max-width: $breakpoint_lg) {
