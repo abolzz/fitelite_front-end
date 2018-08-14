@@ -242,6 +242,12 @@ $(document).ready(function() {
       setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
 
+  $(".arrow-down").click(function() {
+      $("html, body").animate({
+          scrollTop: $('.site-header').height() + $('.slider').height()
+      }, 400);
+  });
+
   // Leave the background color of table data transparent if it is empty
   let tableData = $('.tbody > .trow > .td > span');
 
