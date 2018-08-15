@@ -61,7 +61,6 @@ hr {
   margin-bottom: calc((100vh - 75px)/8.7);
 }
 .dot {
-  cursor: pointer;
   height: 20px;
   width: 20px;
   margin: 0 10px;
@@ -69,8 +68,7 @@ hr {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  &.active,
-  &:hover { background-color: $c_accent; }
+  &.active { background-color: $c_accent; }
 }
 
 /* Fading animation */
