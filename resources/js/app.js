@@ -118,21 +118,30 @@ $(document).ready(function() {
   });
 
   // Add CSS class to Site Header when scrollTop position of the document is not 0
-  let $lastY = $window.scrollTop();
+  var $lastY = $window.scrollTop();
   function add_not_top() {
     $body.addClass("not--top");
   }
   function remove_not_top() {
     $body.removeClass("not--top");
   }
-  let $timeout_add_not_top;
-  let $timeout_remove_not_top;
+  function add_not_top_down() {
+    $body.addClass("not--top-down");
+  }
+  function remove_not_top_down() {
+    $body.removeClass("not--top-down");
+  }
+  var $timeout_add_not_top
+  var $timeout_remove_not_top
+  var $timeout_add_not_top_down
+  var $timeout_remove_not_top_down
+
 
   if( $lastY > 50 ) {
     add_not_top();
   }
 
-  $(window).scroll(() => {
+  $(window).scroll(function() {
 
     var $currentY = $window.scrollTop();
     if ( $currentY > $lastY ) {
@@ -143,8 +152,13 @@ $(document).ready(function() {
     $lastY = $currentY;
     if ( $document.scrollTop() > 50 && y == 'down' ) {
       $timeout_add_not_top = setTimeout(add_not_top, 150);
-    } else if ( $document.scrollTop() <= 100 && y == 'up' ) {
+    } else if ( $document.scrollTop() <= 80 && y == 'up' ) {
       $timeout_remove_not_top = setTimeout(remove_not_top, 150);
+    }
+    if ( $document.scrollTop() > 300 && y == 'down' ) {
+      $timeout_add_not_top_down = setTimeout(add_not_top_down, 150);
+    } else if  ( y == 'up' ) {
+      $timeout_add_not_top_down = setTimeout(remove_not_top_down, 150);
     }
 
   });
@@ -209,7 +223,7 @@ $(document).ready(function() {
   $(".site-header a").click(function() {
     var $href = $(this).attr('href');
       $("html, body").animate({
-          scrollTop: $($href).offset().top - $('.site-header').height()
+          scrollTop: $($href).offset().top
       }, 400);
     $(".mobile-menu-icon").removeClass("open");
     if ($(window).width() < 1199) {
@@ -271,7 +285,7 @@ $(document).ready(function() {
 
         var target = $(this).attr("href"); // Set the target as variable
 
-        // perform animated scrolling by getting top-position of target-element and set it as scroll target
+        // perform animated scrolling by getting bottom-position of target-element and set it as scroll target
         $('html, body').stop().animate({
             scrollTop: $(target).offset().top
         }, 600, function() {

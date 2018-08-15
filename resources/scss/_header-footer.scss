@@ -4,8 +4,8 @@
 .site-header {
 	position: fixed;
 	width: 100%;
-	height: 75px;
-  transition: background-color 0.25s ease-in-out, height 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+	min-height: 75px;
+	transition: .4s ease-in-out;
   z-index: 99;
   li {
   	position: relative;
@@ -18,16 +18,14 @@
   	}
   	&.active span { background-color: $c_additional_2; }
 	}
-	a {
-  	margin: 0 15px;
-  	height: 100%;
-	}
+	a { height: 100%; }
 	li:hover span { background-color: $c_additional_2; }
 }
 .not--top .site-header {
 	background-color: rgba(255, 255, 255, .8);
-	height: 60px;
+	transform: translateY(0);
 }
+.not--top-down .site-header { transform: translateY(-110%) }
 .mobile-menu-icon {
 	.inner {
 		width: 48px;
@@ -78,10 +76,15 @@ $footer_height: 70px;
 		li { height: 75px; }
 		span { top: 75px; }
 	}
-	.not--top .site-header {
-		li { height: 60px; }
-		span { top: 60px; }
-	}
+	.header-menu {
+  	a { margin: 0 15px; }
+  	li:first-of-type {
+  		a { margin-left: 0; }
+  	}
+  	li:last-of-type {
+  		a { margin-right: 0; }
+  	}
+  }
 }
 @media(min-width: $breakpoint_md + 1) and (max-width: $breakpoint_lg) {
 	.inline-x-c-md { text-align: center; }
