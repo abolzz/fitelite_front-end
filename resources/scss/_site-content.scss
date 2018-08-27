@@ -38,57 +38,41 @@ hr {
 }
 
 // Slider section
-.slider {
+.lightslider {
   height: calc(91.5vh - 75px);
   width: 100vw;
-  position: relative;
 }
-.slider-item {
-  display: none;
+.lightslider-item {
   width: 100%;
   height: 100%;
 }
+.lSSlideOuter {
+  position: relative;
+  .lSPager {
+    position: absolute;
+    display: block;
+    top: auto;
+    bottom: 70px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  .lSPager.lSpg {
+      li {
+        &.active a { background-color: $c_accent; }
+        a {
+          height: 20px;
+          width: 20px;
+          margin: 0 10px;
+          background-color: $c_white;
+        }
+      }
+    }
+}
 .slider-text-wrap { height: 80%; }
-.slider-item-1 { background: url("../img/slider-img1.jpg"); }
-.slider-item-2 { background: url("../img/slider-img2.jpg"); }
-.slider-item-3 { background: url("../img/slider-img3.jpg"); }
-.slider-item-4 { background: url("../img/slider-img4.jpg"); }
 .full-h { height: 100%; }
 .z-2 { z-index: 2; }
-
-/* The dots/bullets/indicators */
-.slider-controls {
-  position: absolute;
-  margin-bottom: calc((100vh - 75px)/8.7);
-}
-.dot {
-  height: 20px;
-  width: 20px;
-  margin: 0 10px;
-  background-color: $c_white;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  &.active { background-color: $c_accent; }
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .75} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .75} 
-  to {opacity: 1}
-}
 
 .arrow-down {
   width: 75px;
@@ -105,18 +89,30 @@ hr {
   .slider-text-wrap { width: 80%; }
 }
 @media(min-width: $breakpoint_sm + 1) and (max-width: $breakpoint_lg) {
-  .dot {
-    width: 15px;
-    height: 15px;
+  .lSSlideOuter {
+    .lSPager.lSpg {
+        li {
+          a {
+            width: 15px;
+            height: 15px;
+          }
+        }
+    }
   }
 }
 @media(max-width: $breakpoint_md) {
   .slider-text-wrap { width: 90%; }
 }
 @media(max-width: $breakpoint_sm) {
-  .dot {
-    width: 12px;
-    height: 12px;
+  .lSSlideOuter {
+    .lSPager.lSpg {
+        li {
+          a {
+            width: 12px;
+            height: 12px;
+          }
+        }
+    }
   }
 }
 
@@ -129,10 +125,7 @@ hr {
 // Portrait section
 .portrait-section {
   .inner { padding: 55px 0 45px; }
-  .section-img {
-    background-image: url("../img/girl-pentagon.png");
-    min-height: 350px;
-  }
+  .section-img { min-height: 350px; }
   .article {
     .p:last-of-type { margin-bottom: 10px; }
   }
@@ -161,26 +154,11 @@ hr {
 
 // Angebot section
 .angebot-section {
-  .section-img-1 {
-    background-image: url("../img/triangle-img1.png");
-    min-height: 281px;
-  }
-  .section-img-2 {
-    background-image: url("../img/triangle-img2.png");
-    min-height: 281px;
-  }
-  .section-img-3 {
-    background-image: url("../img/triangle-img3.png");
-    min-height: 318px;
-  }
-  .section-img-4 {
-    background-image: url("../img/triangle-img4.png");
-    min-height: 196px;
-  }
-  .section-img-5 {
-    background-image: url("../img/triangle-img5.png");
-    min-height: 315px;
-  }
+  .section-img-1,
+  .section-img-2 { min-height: 281px; }
+  .section-img-3 { min-height: 318px; }
+  .section-img-4 { min-height: 196px; }
+  .section-img-5 { min-height: 315px; }
 }
 @media(min-width: $breakpoint_lg + 1) {
   .angebot-section {
@@ -238,11 +216,19 @@ hr {
   }
 }
 
+%flex-y-x-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 // Trainingsplan section
 .trainingsplan-section {
   .table {
     word-wrap: break-word;
     .td {
+      @extend %flex-y-x-c;
       flex: 1;
       width: 0;
       height: 70px;
@@ -332,6 +318,8 @@ hr {
       flex: 1;
       width: 0;
       height: 43px;
+      padding: 10px 0;
+      span { max-width: 100%; }
     }
   }
 }

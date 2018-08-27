@@ -39,7 +39,7 @@
 }
 
 // Slider section
-.slider {
+.lightslider {
   font-weight: 600;
   q {
     font-size: 60px;
@@ -51,7 +51,7 @@
   }
 }
 @media(min-width: $breakpoint_md) and (max-width: $breakpoint_lg) {
-  .slider {
+  .lightslider {
     q {
       font-size: 40px;
     }
@@ -62,7 +62,7 @@
   }
 }
 @media(min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
-  .slider {
+  .lightslider {
     q {
       font-size: 35px;
     }
@@ -73,7 +73,7 @@
   }
 }
 @media(max-width: $breakpoint_sm) {
-  .slider {
+  .lightslider {
     q {
       font-size: 28px;
     }
